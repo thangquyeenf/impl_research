@@ -1,0 +1,12 @@
+{
+    "base": ["configs/custom/mr_iql.yaml", "configs/custom/ipl_cus_exp.yaml"],
+    "paired_keys": [
+        ["eval_env", "dataset_kwargs.replay_kwargs.name", "dataset_kwargs.feedback_kwargs.path"]
+    ],
+    "eval_env": ["GymBoss/BossGame-v0"],
+    "dataset_kwargs.replay_kwargs.name": ["GymBoss/BossGame-v0"],
+    "dataset_kwargs.feedback_kwargs.path": [
+        "datasets/custom/datasets.npz"
+    ],
+    "seed": [1, 2, 3, 4, 5]
+}
