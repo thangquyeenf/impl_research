@@ -48,11 +48,11 @@ dataset_kwargs:
     action_eps: 0.00001 # necesary to prevent NaN in the dataset.
   feedback_class: PairwiseComparisonDataset
   feedback_kwargs:
-    path: datasets/preference_transformer/hopper-medium-replay-v2/num500_human_train.npz
-    capacity: 500
-    batch_size: 8
-    segment_size: 100
-    subsample_size: 1
+    path: /root/RL/impl_research/datasets/research/hopper2.npz
+    capacity: 100000
+    batch_size: 16
+    segment_size: 1
+    subsample_size: null
   discount: 0.99
 
 schedule: null

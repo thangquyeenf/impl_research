@@ -1,0 +1,5 @@
+Collected data: 20240824T231027_0_827407.npz
+reward: 2593.576788391941
+length: 826.407
+TimeLimit.truncated: 0.9978165938864629
+reward_std: 568.8675567171794

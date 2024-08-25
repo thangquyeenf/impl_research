@@ -21,176 +21,191 @@
             "name": "IPL",
             "type": "python",
             "request": "launch",
-            "cwd": "/home/ubuntu/thangquyeenf/inverse-preference-learning",
+            "cwd": "/root/RL/impl_research",
             "module": "scripts.train",
-            "args": ["--config", "/home/ubuntu/thangquyeenf/inverse-preference-learning/configs/gym_locomotion/mr_iql.yaml", "--path", "/home/ubuntu/thangquyeenf/inverse-preference-learning/saves_mr_iql", "--device", "auto"],
+            "args": ["--config", "/root/RL/impl_research/configs/gym_locomotion/mr_iql.yaml", "--path", "/root/RL/impl_research/saves_mr_iql", "--device", "auto"],
             "jinja": true,
             "justMyCode": false,
             "preLaunchTask": "Activate Conda Environment",
-            "python": "/home/ubuntu/anaconda3/envs/ipl/bin/python",
+            "python": "/root/miniconda3/envs/thangquyeenf_ipl/bin/python",
             "env": {
-                "PYTHONPATH": "/home/ubuntu/thangquyeenf/inverse-preference-learning"
+                "PYTHONPATH": "/root/RL/impl_research"
             }
         },
         {
             "name": "IPL Normal",
             "type": "python",
             "request": "launch",
-            "cwd": "/home/ubuntu/inverse-preference-learning",
+            "cwd": "/root/RL/impl_research",
             "module": "scripts.train",
-            "args": ["--config", "/home/ubuntu/inverse-preference-learning/configs/gym_locomotion/mr_iql.yaml", "--path", "/home/ubuntu/inverse-preference-learning/saves_normal_case", "--device", "auto"],
+            "args": ["--config", "/root/RL/impl_research/configs/gym_locomotion/mr_iql.yaml", "--path", "/root/RL/impl_research/saves_normal_case", "--device", "auto"],
             "jinja": true,
             "justMyCode": false,
             "preLaunchTask": "Activate Conda Environment",
-            "python": "/home/ubuntu/anaconda3/envs/ipl/bin/python",
+            "python": "/root/miniconda3/envs/thangquyeenf_ipl/bin/python",
             "env": {
-                "PYTHONPATH": "/home/ubuntu/inverse-preference-learning"
+                "PYTHONPATH": "/root/RL/impl_research"
             }
         },
         {
             "name": "IPL Multiple Batch One time",
             "type": "python",
             "request": "launch",
-            "cwd": "/home/ubuntu/inverse-preference-learning",
+            "cwd": "/root/RL/impl_research",
             "module": "scripts.train",
-            "args": ["--config", "/home/ubuntu/inverse-preference-learning/configs/gym_locomotion/mr_iql.yaml", "--path", "/home/ubuntu/inverse-preference-learning/saves_multi_batches_onetime", "--device", "auto"],
+            "args": ["--config", "/root/RL/impl_research/configs/gym_locomotion/mr_iql.yaml", "--path", "/root/RL/impl_research/saves_multi_batches_onetime", "--device", "auto"],
             "jinja": true,
             "justMyCode": false,
             "preLaunchTask": "Activate Conda Environment",
-            "python": "/home/ubuntu/anaconda3/envs/ipl/bin/python",
+            "python": "/root/miniconda3/envs/thangquyeenf_ipl/bin/python",
             "env": {
-                "PYTHONPATH": "/home/ubuntu/inverse-preference-learning"
+                "PYTHONPATH": "/root/RL/impl_research"
             }
         },
         {
             "name": "Eval IPL Normal Case",
             "type": "python",
             "request": "launch",
-            "cwd": "/home/ubuntu/inverse-preference-learning",
+            "cwd": "/root/RL/impl_research",
             "module": "scripts.evaluate",
             "args": ["--checkpoint", 
-            "/home/ubuntu/inverse-preference-learning/saves_normal_case/final_model.pt", 
-            "--path", "/home/ubuntu/inverse-preference-learning/evaluate_normal_case", "--device", "auto", 
+            "/root/RL/impl_research/saves_normal_case/final_model.pt", 
+            "--path", "/root/RL/impl_research/evaluate_normal_case", "--device", "auto", 
             "--num-ep", "1000", "--num-gifs","10", "--every-n-frames","100"],
             "jinja": true,
             "justMyCode": false,
             "preLaunchTask": "Activate Conda Environment",
-            "python": "/home/ubuntu/anaconda3/envs/ipl/bin/python",
+            "python": "/root/miniconda3/envs/thangquyeenf_ipl/bin/python",
             "env": {
-                "PYTHONPATH": "/home/ubuntu/inverse-preference-learning"
+                "PYTHONPATH": "/root/RL/impl_research"
             }
         },
         {
             "name": "Eval IPL Multi Batch One time",
             "type": "python",
             "request": "launch",
-            "cwd": "/home/ubuntu/inverse-preference-learning",
+            "cwd": "/root/RL/impl_research",
             "module": "scripts.evaluate",
             "args": ["--checkpoint", 
-            "/home/ubuntu/inverse-preference-learning/saves_multi_batches_onetime/final_model.pt", 
-            "--path", "/home/ubuntu/inverse-preference-learning/evaluate_one_time", "--device", "auto", 
+            "/root/RL/impl_research/saves_multi_batches_onetime/final_model.pt", 
+            "--path", "/root/RL/impl_research/evaluate_one_time", "--device", "auto", 
             "--num-ep", "1000", "--num-gifs","10", "--every-n-frames","100"],
             "jinja": true,
             "justMyCode": false,
             "preLaunchTask": "Activate Conda Environment",
-            "python": "/home/ubuntu/anaconda3/envs/ipl/bin/python",
+            "python": "/root/miniconda3/envs/thangquyeenf_ipl/bin/python",
             "env": {
-                "PYTHONPATH": "/home/ubuntu/inverse-preference-learning"
+                "PYTHONPATH": "/root/RL/impl_research"
             }
         },
         {
             "name": "Eval IPL One time",
             "type": "python",
             "request": "launch",
-            "cwd": "/home/ubuntu/inverse-preference-learning",
+            "cwd": "/root/RL/impl_research",
             "module": "scripts.evaluate",
             "args": ["--checkpoint", 
-            "/home/ubuntu/inverse-preference-learning/saves_one_batch_one_time/final_model.pt", 
-            "--path", "/home/ubuntu/inverse-preference-learning/evaluate_one_time", "--device", "auto", 
+            "/root/RL/impl_research/saves_one_batch_one_time/final_model.pt", 
+            "--path", "/root/RL/impl_research/evaluate_one_time", "--device", "auto", 
             "--num-ep", "1000", "--num-gifs","10", "--every-n-frames","100"],
             "jinja": true,
             "justMyCode": false,
             "preLaunchTask": "Activate Conda Environment",
-            "python": "/home/ubuntu/anaconda3/envs/ipl/bin/python",
+            "python": "/root/miniconda3/envs/thangquyeenf_ipl/bin/python",
             "env": {
-                "PYTHONPATH": "/home/ubuntu/inverse-preference-learning"
+                "PYTHONPATH": "/root/RL/impl_research"
             }
         },
         {
             "name": "extract_npz",
             "type": "python",
             "request": "launch",
-            "cwd": "/home/ubuntu/inverse-preference-learning",
+            "cwd": "/root/RL/impl_research",
             "module": "datasets.extract_npz",
             "jinja": true,
             "justMyCode": false,
             "preLaunchTask": "Activate Conda Environment",
-            "python": "/home/ubuntu/anaconda3/envs/ipl/bin/python",
+            "python": "/root/miniconda3/envs/thangquyeenf_ipl/bin/python",
             "env": {
-                "PYTHONPATH": "/home/ubuntu/inverse-preference-learning"
+                "PYTHONPATH": "/root/RL/impl_research"
             }
         },
         {
             "name": "IPL AWAC",
             "type": "python",
             "request": "launch",
-            "cwd": "/home/ubuntu/thangquyeenf/inverse-preference-learning",
+            "cwd": "/root/RL/impl_research",
             "module": "scripts.train",
-            "args": ["--config", "/home/ubuntu/thangquyeenf/inverse-preference-learning/configs/metaworld/ipl_awac.yaml", "--path", "/home/ubuntu/thangquyeenf/inverse-preference-learning/saves_awac", "--device", "auto"],
+            "args": ["--config", "/root/RL/impl_research/configs/metaworld/ipl_awac.yaml", "--path", "/root/RL/impl_research/saves_awac", "--device", "auto"],
             "jinja": true,
             "justMyCode": false,
             "preLaunchTask": "Activate Conda Environment",
-            "python": "/home/ubuntu/anaconda3/envs/ipl/bin/python",
+            "python": "/root/miniconda3/envs/thangquyeenf_ipl/bin/python",
             "env": {
-                "PYTHONPATH": "/home/ubuntu/thangquyeenf/inverse-preference-learning"
+                "PYTHONPATH": "/root/RL/impl_research"
             }
         },
         {
             "name": "Eval AWAC",
             "type": "python",
             "request": "launch",
-            "cwd": "/home/ubuntu/thangquyeenf/inverse-preference-learning",
+            "cwd": "/root/RL/impl_research",
             "module": "scripts.evaluate",
             "args": ["--checkpoint", 
-            "/home/ubuntu/thangquyeenf/inverse-preference-learning/saves_awac__/final_model.pt", 
-            "--path", "/home/ubuntu/thangquyeenf/inverse-preference-learning/evaluate_awac", "--device", "auto", 
+            "/root/RL/impl_research/saves_awac__/final_model.pt", 
+            "--path", "/root/RL/impl_research/evaluate_awac", "--device", "auto", 
             "--num-ep", "1000", "--num-gifs","10", "--every-n-frames","100"],
             "jinja": true,
             "justMyCode": false,
             "preLaunchTask": "Activate Conda Environment",
-            "python": "/home/ubuntu/anaconda3/envs/ipl/bin/python",
+            "python": "/root/miniconda3/envs/thangquyeenf_ipl/bin/python",
             "env": {
-                "PYTHONPATH": "/home/ubuntu/thangquyeenf/inverse-preference-learning"
+                "PYTHONPATH": "/root/RL/impl_research"
             }
         },
         {
             "name": "IPL IQL",
             "type": "python",
             "request": "launch",
-            "cwd": "/home/ubuntu/thangquyeenf/inverse-preference-learning",
+            "cwd": "/root/RL/impl_research",
             "module": "scripts.train",
-            "args": ["--config", "/home/ubuntu/thangquyeenf/inverse-preference-learning/configs/gym_locomotion/ipl_iql.yaml", "--path", "/home/ubuntu/thangquyeenf/inverse-preference-learning/saves_iql", "--device", "auto"],
+            "args": ["--config", "/root/RL/impl_research/configs/gym_locomotion/ipl_iql.yaml", "--path", "/root/RL/impl_research/saves_iql", "--device", "auto"],
             "jinja": true,
             "justMyCode": false,
             "preLaunchTask": "Activate Conda Environment",
-            "python": "/home/ubuntu/anaconda3/envs/ipl/bin/python",
+            "python": "/root/miniconda3/envs/thangquyeenf_ipl/bin/python",
             "env": {
-                "PYTHONPATH": "/home/ubuntu/thangquyeenf/inverse-preference-learning"
+                "PYTHONPATH": "/root/RL/impl_research"
+            }
+        },
+        {
+            "name": "IPL IQL Action",
+            "type": "python",
+            "request": "launch",
+            "cwd": "/root/RL/impl_research",
+            "module": "scripts.train",
+            "args": ["--config", "/root/RL/impl_research/configs/gym_locomotion/ipl_iql.yaml", "--path", "/root/RL/impl_research/saves_iql_action", "--device", "auto"],
+            "jinja": true,
+            "justMyCode": false,
+            "preLaunchTask": "Activate Conda Environment",
+            "python": "/root/miniconda3/envs/thangquyeenf_ipl/bin/python",
+            "env": {
+                "PYTHONPATH": "/root/RL/impl_research"
             }
         },
         {
             "name": "MR IQL",
             "type": "python",
             "request": "launch",
-            "cwd": "/home/ubuntu/thangquyeenf/inverse-preference-learning",
+            "cwd": "/root/RL/impl_research",
             "module": "scripts.train",
-            "args": ["--config", "/home/ubuntu/thangquyeenf/inverse-preference-learning/configs/gym_locomotion/mr_iql.yaml", "--path", "/home/ubuntu/thangquyeenf/inverse-preference-learning/saves_mr", "--device", "auto"],
+            "args": ["--config", "/root/RL/impl_research/configs/gym_locomotion/mr_iql.yaml", "--path", "/root/RL/impl_research/saves_mr", "--device", "auto"],
             "jinja": true,
             "justMyCode": false,
             "preLaunchTask": "Activate Conda Environment",
-            "python": "/home/ubuntu/anaconda3/envs/ipl/bin/python",
+            "python": "/root/miniconda3/envs/thangquyeenf_ipl/bin/python",
             "env": {
-                "PYTHONPATH": "/home/ubuntu/thangquyeenf/inverse-preference-learning"
+                "PYTHONPATH": "/root/RL/impl_research"
             }
         },
 
@@ -198,15 +213,15 @@
             "name": "CUSTOM IPL IQL",
             "type": "python",
             "request": "launch",
-            "cwd": "/home/ubuntu/thangquyeenf/inverse-preference-learning",
+            "cwd": "/root/RL/impl_research",
             "module": "scripts.train",
-            "args": ["--config", "/home/ubuntu/thangquyeenf/inverse-preference-learning/configs/custom/ipl_cus_exp.yaml", "--path", "/home/ubuntu/thangquyeenf/inverse-preference-learning/saves_custom_ipl", "--device", "auto"],
+            "args": ["--config", "/root/RL/impl_research/configs/custom/ipl_cus_exp.yaml", "--path", "/root/RL/impl_research/saves_custom_ipl", "--device", "auto"],
             "jinja": true,
             "justMyCode": false,
             "preLaunchTask": "Activate Conda Environment",
-            "python": "/home/ubuntu/anaconda3/envs/ipl/bin/python",
+            "python": "/root/miniconda3/envs/thangquyeenf_ipl/bin/python",
             "env": {
-                "PYTHONPATH": "/home/ubuntu/thangquyeenf/inverse-preference-learning"
+                "PYTHONPATH": "/root/RL/impl_research"
             }
         },
 
@@ -214,15 +229,15 @@
             "name": "CUSTOM IPL IQL",
             "type": "python",
             "request": "launch",
-            "cwd": "/home/ubuntu/thangquyeenf/inverse-preference-learning",
+            "cwd": "/root/RL/impl_research",
             "module": "scripts.train",
-            "args": ["--config", "/home/ubuntu/thangquyeenf/inverse-preference-learning/configs/custom/mr_cus_exp.yaml", "--path", "/home/ubuntu/thangquyeenf/inverse-preference-learning/saves_custom_mr", "--device", "auto"],
+            "args": ["--config", "/root/RL/impl_research/configs/custom/mr_cus_exp.yaml", "--path", "/root/RL/impl_research/saves_custom_mr", "--device", "auto"],
             "jinja": true,
             "justMyCode": false,
             "preLaunchTask": "Activate Conda Environment",
-            "python": "/home/ubuntu/anaconda3/envs/ipl/bin/python",
+            "python": "/root/miniconda3/envs/thangquyeenf_ipl/bin/python",
             "env": {
-                "PYTHONPATH": "/home/ubuntu/thangquyeenf/inverse-preference-learning"
+                "PYTHONPATH": "/root/RL/impl_research"
             }
         },
     ]

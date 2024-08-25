@@ -40,14 +40,25 @@ if __name__ == "__main__":
     )
 
     batch = replay_buffer.sample(batch_size=2 * capacity, stack=args.segment_size, pad=0)
-
-    returns = np.sum(batch["reward"] * np.power(replay_buffer.discount, np.arange(batch["reward"].shape[1])), axis=1)
+    print("batch:::", batch["obs"].shape)
+    print("batch:::", batch["action"].shape)
+    print("batch:::", batch["next_obs"].shape)
+    print("batch:::", batch["reward"].shape)
+    if args.segment_size == 1:
+        batch["obs"] = batch["obs"].reshape(batch["obs"].shape[0], 1, batch["obs"].shape[1])
+        batch["action"] = batch["action"].reshape(batch["action"].shape[0], 1, batch["action"].shape[1])
+        batch["next_obs"] = batch["next_obs"].reshape(batch["next_obs"].shape[0], 1, batch["next_obs"].shape[1])
+        returns = batch["reward"]
+    else:
+        returns = np.sum(batch["reward"] * np.power(replay_buffer.discount, np.arange(batch["reward"].shape[1])), axis=1)
+        print("return::::", returns)
     queries = dict(
         obs_1=batch["obs"][:capacity],
         obs_2=batch["obs"][capacity:],
         action_1=batch["action"][:capacity],
         action_2=batch["action"][capacity:],
     )
+    # print(queries)
     labels = 1.0 * (returns[:capacity] < returns[capacity:])
     feedback_dataset.add(queries, labels)  # Write the data into the buffer.
     print("Feedback Dataset size", len(feedback_dataset))

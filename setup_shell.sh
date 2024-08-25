@@ -1,7 +1,7 @@
 # Make sure we have the conda environment set up.
-CONDA_PATH=/home/ubuntu/anaconda3/bin/activate
-ENV_NAME=ipl
-REPO_PATH=/home/ubuntu/thangquyeenf/inverse-preference-learning
+CONDA_PATH=/root/miniconda3/bin/activate
+ENV_NAME=thangquyeenf_ipl
+REPO_PATH=/root/RL/impl_research
 USE_MUJOCO_PY=true
 WANDB_API_KEY="8574fe5d1d474f0aa5d6c39aefbfc1037c2bc9d4" # If you want to use wandb, set this to your API key.
 

@@ -12,7 +12,7 @@ import torch
 import yaml
 
 import research
-import GymBoss
+
 from . import schedules
 from .trainer import Trainer
 from .utils import flatten_dict

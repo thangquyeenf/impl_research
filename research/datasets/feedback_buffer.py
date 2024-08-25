@@ -69,6 +69,8 @@ class PairwiseComparisonDataset(torch.utils.data.IterableDataset):
                         data = utils.get_from_batch(data, 0, self._capacity)
                     data = utils.nest_dict(data)
                     self.add(data, data["label"])  # Add to the buffer via the add method!
+            else:
+                data = []
 
         # Print the size of the allocation.
         storage = 0

@@ -4,7 +4,7 @@
       {
         "label": "Activate Conda Environment",
         "type": "shell",
-        "command": "source /home/ubuntu/anaconda3/etc/profile.d/conda.sh && conda activate ipl",
+        "command": "source /root/miniconda3/etc/profile.d/conda.sh && conda activate thangquyeenf_ipl",
       "problemMatcher": []
       }
     ]

@@ -252,6 +252,7 @@ class IPL_IQL(OffPolicyAlgorithm):
         all_metrics = {}
         replay_batch, feedback_batch = batch
 
+
         if step < self.random_steps:
             return all_metrics
 

@@ -1,0 +1,84 @@
+alg: IPL_IQL
+alg_kwargs:
+  beta: 0.333333
+  chi2_coeff: 0.5
+  chi2_replay_weight: 0.5
+  expectile: 0.7
+  offline_steps: -1
+  policy_replay_weight: 0.5
+  random_steps: 0
+  target_clipping: true
+  tau: 0.005
+  value_replay_weight: 0.5
+checkpoint: null
+dataset: ReplayAndFeedbackBuffer
+dataset_kwargs:
+  discount: 0.99
+  feedback_class: PairwiseComparisonDataset
+  feedback_kwargs:
+    batch_size: 16
+    capacity: 100000
+    path: /root/RL/impl_research/datasets/research/hopper2.npz
+    segment_size: 1
+    subsample_size: null
+  replay_class: D4RLDataset
+  replay_kwargs:
+    action_eps: 1.0e-05
+    batch_size: 256
+    discount: 0.99
+    distributed: false
+    name: hopper-medium-replay-v2
+    normalize_reward: true
+env: null
+env_kwargs: {}
+eval_env: hopper-medium-replay-v2
+eval_env_kwargs: {}
+network: ActorCriticValuePolicy
+network_kwargs:
+  actor_class: DiagonalGaussianMLPActor
+  actor_kwargs:
+    log_std_bounds:
+    - -5
+    - 2
+    log_std_tanh: false
+    output_act:
+    - import
+    - torch.nn
+    - Tanh
+    squash_normal: false
+    state_dependent_log_std: false
+  critic_class: ContinuousMLPCritic
+  critic_kwargs:
+    ensemble_size: 2
+  hidden_layers:
+  - 256
+  - 256
+  ortho_init: true
+  value_class: MLPValue
+  value_kwargs:
+    ensemble_size: 1
+optim: Adam
+optim_kwargs:
+  lr: 0.0003
+processor: null
+processor_kwargs: {}
+schedule: null
+schedule_kwargs: {}
+seed: null
+trainer_kwargs:
+  eval_fn: eval_policy
+  eval_freq: 5000
+  eval_kwargs:
+    num_ep: 10
+  log_freq: 500
+  loss_metric: reward
+  profile_freq: 500
+  total_steps: 500000
+  train_dataloader_kwargs:
+    batch_size: null
+    collate_fn: null
+    num_workers: 0
+validation_dataset: null
+validation_dataset_kwargs: null
+wrapper: null
+wrapper_kwargs: {}
